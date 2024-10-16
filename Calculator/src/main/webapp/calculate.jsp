@@ -2,30 +2,35 @@
 <%@ page import="dao.Calculator" %>
 <%@ page import="java.lang.ArithmeticException" %>
 <%@ page import="java.lang.IllegalArgumentException" %>
+<%@ page import="java.lang.NumberFormatException" %>
 
-<jsp:useBean id="calc" class="dao.Calculator" scope="request" />
-<jsp:setProperty name="calc" property="num1" param="num1" />
-<jsp:setProperty name="calc" property="num2" param="num2" />
-<jsp:setProperty name="calc" property="operator" param="operator" />
+<%
+    String num1Str = request.getParameter("num1");
+    String num2Str = request.getParameter("num2");
+    String operator = request.getParameter("operator");
+    Calculator calc = new Calculator();
 
-<html>
-<head>
-    <title>계산 결과</title>
-</head>
-<body>
-    <h2>계산 결과</h2>
-    <%
-        try {
-            double result = calc.getResult();
-            out.println("<p>결과: " + result + "</p>");
-        } catch (ArithmeticException e) {
-            response.sendRedirect("calculationError.jsp");
-        } catch (IllegalArgumentException e) {
-            response.sendRedirect("calculationError.jsp");
-        } catch (Exception e) {
-            response.sendRedirect("calculationError.jsp");
-        }
-    %>
-    <a href="calculator.jsp">돌아가기</a>
-</body>
-</html>
+    try {
+    	double num1 = Double.parseDouble(num1Str);
+        double num2 = Double.parseDouble(num2Str);
+        
+        calc.setNum1(num1);
+        calc.setNum2(num2);
+        calc.setOperator(operator);
+
+        double result = calc.getResult();
+        out.println("<h2>계산 결과</h2>");
+        out.println("<p>결과: " + result + "</p>");
+
+    } catch (NumberFormatException e) {
+        response.sendRedirect("calculateFailed.jsp");
+    } catch (ArithmeticException e) {
+        response.sendRedirect("calculateFailed.jsp");
+    } catch (IllegalArgumentException e) {
+        response.sendRedirect("calculateFailed.jsp");
+    } catch (Exception e) {
+        response.sendRedirect("calculateFailed.jsp");
+    }
+	    out.println("<a href='calculator.jsp'>돌아가기</a>");
+
+%>
