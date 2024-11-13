@@ -10,15 +10,14 @@
 <body>
     <form action="register.jsp" method="post">
         <h2>회원가입</h2>
-        <label>아이디 : <input type="text" name="username" required></label><br>
-        <label>비밀번호 : <input type="password" name="password" required></label><br>
-        <label>이메일주소 : <input type="email" name="email" required></label><br>
-        <label>생년월일 : <input type="date" name="birthdate" placeholder="20000515" required></label><br>
-        <label>전화번호 : <input type="tel" name="phoneNumber" placeholder="010-0000-0000" required></label><br>
-        <input type="submit" value="Register">
-    </form>
-
-    <%
+        <label>아이디 <input type="text" name="username" placeholder="아이디" required></label><br>
+        <label>비밀번호 <input type="password" name="password" placeholder="비밀번호" required></label><br>
+        <label>이메일주소 <input type="email" name="email" placeholder="이메일" required></label><br>
+        <label>생년월일 <input type="date" name="birthdate" placeholder="20000515" required></label><br>
+        <label>전화번호 <input type="tel" name="phoneNumber" placeholder="010-0000-0000" required></label><br>
+        <input type="submit" value="회원가입">
+        
+        <%
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
@@ -30,8 +29,9 @@
             User newUser = new User(username, password, email, birthdate, phoneNumber);
             userRepo.addUser(newUser);
 
-            out.println("<p>회원가입 완료! <a href='login.jsp'>로그인</a>.</p>");
+            out.println("<p>회원가입 완료! <a href='login.jsp'>로그인하러가기</a></p>");
         }
-    %>
+   		 %>
+    </form>    
 </body>
 </html>

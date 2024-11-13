@@ -8,10 +8,10 @@
 <body>
     <form action="clubs.jsp" method="post">
         <h2>로그인</h2>
-        <label>아이디 : <input type="text" name="username"></label><br>
-        <label>비밀번호 : <input type="password" name="password"></label><br>
+        <label>아이디 <input type="text" name="username" required></label><br>
+        <label>비밀번호 <input type="password" name="password" required></label><br>
         <input type="submit" value="Login">
-    	<p> 계정이 없으신가요? <a href="register.jsp">회원가입</a>.</p>
+    	<p> 계정이 없으신가요? <a href="register.jsp">회원가입</a></p>
     </form>
 </body>
 </html>
