@@ -16,7 +16,17 @@ public class Book implements Serializable {
 	private long   unitsInStock; 	//재고개수
 	private String releaseDate;   //출판일(월/년)
 	private String condition; 		//신제품 or 구제품 or 리퍼브제품
+	private String filename;
+	private int quantity;
 	
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -108,5 +118,12 @@ public class Book implements Serializable {
 		this.condition = condition;
 	}
 
-	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 }
