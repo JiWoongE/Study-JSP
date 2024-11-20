@@ -1,0 +1,169 @@
+/* 페이지 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+main {
+	display: flex;
+	flex-direction: column; /* 세로 정렬 */
+	align-items: center; /* 가로 중앙 정렬 */
+	gap: 40px; /* 섹션 간 간격 */
+	padding: 20px; /* 내부 여백 */
+	background-color: white; /* 연한 배경색 */
+	min-height: calc(100vh - 140px); /* 헤더와 푸터 제외한 높이 */
+}
+
+.profile-update-container {
+	width: 30%;
+	padding-top: 20px; /* 컨테이너 내부 위쪽 여백 */
+	padding-bottom: 20px; /* 컨테이너 내부 아래쪽 여백 */
+}
+
+/* 제목 스타일 */
+.profile-update-container h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 2rem;
+	color: #333;
+}
+
+/* 폼 섹션 스타일 */
+.profile-section {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 800px; /* 최대 너비 제한 */
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto; /* 중앙 정렬 */
+}
+
+.profile-section label {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #333;
+}
+
+.profile-section input[type="text"],
+.profile-section input[type="password"],
+.profile-section input[type="email"],
+.profile-section input[type="number"],
+.profile-section button {
+    width: 100%;
+	font-size: 1rem;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.profile-section input:focus {
+    outline: none;
+	border: 2px solid #333;
+	box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+}
+
+.profile-section button {
+    width: 100%;
+	padding: 15px;
+	font-size: 1.2rem;
+	background-color: #696969;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.profile-section button:hover {
+    background-color: #333;
+}
+/* 투표 목록 스타일 */
+.poll-lists {
+    width: 50%;
+    padding-top: 20px; /* 컨테이너 내부 위쪽 여백 */
+    padding-bottom: 20px; /* 컨테이너 내부 아래쪽 여백 */
+    
+    /* 가운데 정렬 */
+    margin: 0 auto; /* 좌우 가운데 정렬 */
+    display: flex;
+    flex-direction: column; /* 세로 배치 */
+    align-items: center; /* 자식 요소를 수평 가운데 정렬 */
+    justify-content: center; /* 수직 가운데 정렬 (옵션) */
+}
+
+.poll-lists h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* 기존 헤더 ul li a 스타일과 충돌 방지 */
+.poll-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.poll-list li {
+	max-width: 800px; /* 최대 너비 */
+	background-color: #f9f9f9; /* 흰색 배경 */
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 */
+	padding: 20px;
+	margin-bottom: 15px;
+}
+
+.poll-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #80c4e9;
+    margin-bottom:10px
+}
+
+.poll-link:hover {
+    text-decoration: underline;
+}
+
+.poll-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.poll-deadline {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-section input,
+    .profile-section button {
+        font-size: 0.9rem;
+    }
+}
