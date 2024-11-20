@@ -2,10 +2,11 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background-color: #f9f9f9;
+	background-color: #ffffff;
 }
 
 .login-page {
+	background-color: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start; /* 중앙에서 살짝 위로 배치 */
@@ -22,7 +23,7 @@ body {
 .login-container h1 {
 	text-align: center;
 	margin-bottom: 20px;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: #333;
 }
 

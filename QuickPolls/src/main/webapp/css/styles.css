@@ -3,21 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: white;
     padding: 15px 20px;
     height: 70px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
-    color: white;
+    color: #000;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 1rem;
 }
 
 .navbar a:hover {
-    background-color: #555;
     border-radius: 5px;
 }
 
@@ -29,13 +28,18 @@
 }
 
 .navbar-menu li {
-    margin-left: 15px;
+	background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin:8px;
 }
 
 .navbar-brand a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: #000;
     text-decoration: none;
 }
 
@@ -44,19 +48,19 @@
 }
 
 .logo-image {
-    width: 40px; /* 이미지 너비 */
-    height: 40px; /* 이미지 높이 */
-    margin-right: 10px; /* 로고 텍스트와 간격 */
+    width: 50px; /* 이미지 너비 */
+    height: 50px; /* 이미지 높이 */
+    margin-right: 0px; /* 로고 텍스트와 간격 */
     vertical-align: middle; /* 텍스트와 수직 정렬 */
 }
 
 /* === 푸터 === */
 footer {
-    text-align: left;
+    text-align: center;
     background-color: rgba(51, 51, 51, 0); /* 반투명 배경: 80% 불투명 */
     color: white;
     padding: 10px 0;
-    position: fixed;
+    position: relaative;
     bottom: 0;
     width: 100%;
     color:black;

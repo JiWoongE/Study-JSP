@@ -21,7 +21,8 @@
     String title = multi.getParameter("pollTitle");
     String description = multi.getParameter("pollDescription");
     String deadline = multi.getParameter("pollDeadline");
-    boolean isMultipleChoice = "true".equals(multi.getParameter("is_multiple_choice")); // 수정
+    boolean isMultipleChoice = multi.getParameter("is_multiple_choice") != null;
+
     boolean isAnonymous = "true".equals(multi.getParameter("is_anonymous")); // 수정
     String createdBy = (String) session.getAttribute("username");
 

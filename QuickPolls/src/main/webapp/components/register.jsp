@@ -26,12 +26,6 @@
                     <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
                 </div>
 
-                <!-- 비밀번호 확인 -->
-                <div class="form-group">
-                    <label for="confirmPassword">비밀번호 확인</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="비밀번호를 다시 입력하세요" required>
-                </div>
-
                 <!-- 이메일 입력 -->
                 <div class="form-group">
                     <label for="email">이메일</label>

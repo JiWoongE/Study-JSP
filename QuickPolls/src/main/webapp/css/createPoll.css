@@ -2,11 +2,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 /* 투표 생성 컨테이너 */
 .create-poll-page {
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: flex-start; /* 중앙에서 살짝 위로 배치 */
@@ -23,7 +24,7 @@ body {
 .create-poll-container h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #333;
 }
 
@@ -155,7 +156,22 @@ body {
 .add-option-button:hover {
     background-color: #333; /* 호버 시 더 진한 파란색 */
 }
+/* === 체크박스 스타일 === */
+.poll-checkbox-container {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    gap: 10px; /* 체크박스와 텍스트 간격 */
+    margin-bottom: 20px; /* 아래 요소와 간격 */
+}
 
+.poll-checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc; /* 기본 테두리 */
+    border-radius: 4px; /* 살짝 둥근 모서리 */
+    cursor: pointer;
+    transition: all 0.3s ease; /* 클릭 시 전환 효과 */
+}
 
 /* 제출 버튼 */
 .submit-btn {

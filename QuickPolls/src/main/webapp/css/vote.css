@@ -1,0 +1,107 @@
+/* 전체 페이지 스타일 */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
+
+.vote-page {
+	background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 중앙에서 살짝 위로 배치 */
+    min-height: 100vh;
+    padding-top: 50px; /* 상단 여백 */
+}
+/* 메인 컨테이너 */
+.poll-list {
+	display: block;
+	unicode-bidi: isolate;
+}
+
+.poll-list h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 2rem;
+	color: #333;
+}
+
+.poll-container {
+	max-width:1200px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+/* 개별 투표 항목 */
+.poll-item {
+	border: 0.5px solid;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 0 16px;
+	margin: 20px;
+	width: 300px;
+	height: 190px;
+	justify-content: center;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 */
+}
+
+/* 투표 제목 */
+.poll-item h3 {
+	text-align : center;
+	font-size: 1.2rem;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+/* 세부 정보 */
+.poll-item .details {
+	text-align : center;
+	font-size: 0.9rem;
+	color: #777;
+	margin-bottom: 15px;
+}
+
+/* 버튼 그룹 */
+.poll-item .actions {
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
+	justify-content: center;
+}
+
+/* 버튼 스타일 */
+.poll-item .btn {
+	padding: 10px 15px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.poll-item .vote-btn {
+	background-color: #af1740;
+}
+
+.poll-item .vote-btn:hover {
+	background-color: #cc2b52;
+}
+
+.poll-item .result-btn {
+	background-color: #133e87;
+}
+
+.poll-item .result-btn:hover {
+	background-color: #608bc1;
+}

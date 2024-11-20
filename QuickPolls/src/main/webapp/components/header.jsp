@@ -11,7 +11,7 @@
 	<header>
 		<nav class="navbar">
 			<div class="navbar-brand">
-				<img src="<%=request.getContextPath()%>/images/poll.png" alt="투표함" class="logo-image">
+				<img src="<%=request.getContextPath()%>/images/poll.png" alt="투표함" class="logo-image"> 
 				<a href="index.jsp">QuickPolls</a>
 			</div>
 			<ul class="navbar-menu">

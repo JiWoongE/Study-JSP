@@ -90,7 +90,15 @@
                     </div>
                     <button type="button" class="add-option-button" onclick="addOption()">+ 항목 추가</button>
                 </div>
-
+				
+				<!-- 복수 선택 가능 여부 -->
+                <div class="poll-section">
+    			<div class="poll-checkbox-container">
+        			<input type="checkbox" id="isMultipleChoice" name="is_multiple_choice">
+       				<label>복수 선택 허용</label>
+    				</div>
+				</div>
+                
 				<!-- 투표 마감일 -->
 				<div class="poll-section">
 					<label for="pollDeadline">투표 마감일</label> <input
