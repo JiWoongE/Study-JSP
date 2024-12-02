@@ -95,3 +95,7 @@ p a {
 p a:hover {
     text-decoration: underline;
 }
+
+.error-message {
+	color : red;
+}
